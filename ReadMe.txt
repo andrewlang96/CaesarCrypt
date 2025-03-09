@@ -4,7 +4,9 @@
 DecryptionCaeser Outline
 
 -Encryption
-	First each letter in the alphaben must be assigned a number 1 - 26. The user will provide a string of text that they will have encrypted and a key value 1 - 25. The sting will be 		converted into a string of its associated numeric values ("abc" --> 1,2,3) and then the key balue will be added mod26 to each of the integers. Finally the numbers will be mapped backed 	to letters.
+	First each letter in the alphaben must be assigned a number 1 - 26. The user will provide the string of text that they would like to have encrypted as well as
+	a key value that will be used to encrypt the text (1 - 25). The provided string will be converted into a list of its associated numeric values ("abc" --> 1,2,3) and then
+	the key value will be added mod26 to each of the associated values. Finally the numbers will be mapped backed 	to letters to produce the encrypted string.
 	Example:
 		string = "the string"
 		key = 7
@@ -13,7 +15,10 @@ DecryptionCaeser Outline
 		encrypted_string = "aol zaypun"
 
 -Model Building
-	This model is based on tracking the average rate of occurance of pairs of adjecent letters in written English. This is done by reading through a training text (prefferabley a large 		text) and identifying each unique adjecent letter pair (unique_adja_pairs("the") = ["th", "he"]), and how many times it occures with respect to the total number of adjacent letter 		pairs (total_adja_pairs("the") = 2). The model also uses the distance between the letteres in these pairs. This distance is important because while the caeser cypher changes the value 	of each letter, it does not change the distance between each adjacent pair of letters.
+	This model is based on tracking the average rate of occurance of pairs of adjecent letters in written English. This is done by reading through a training text
+	(prefferabley a large 		text) and identifying each unique adjecent letter pair (unique_adja_pairs("the") = ["th", "he"]), and how many times it occures with respect
+	to the total number of adjacent letter 		pairs (total_adja_pairs("the") = 2). The model also uses the distance between the letteres in these pairs. This distance is important
+	because while the caeser cypher changes the value 	of each letter, it does not change the distance between each adjacent pair of letters.
 	Example:
 		*********** PAIR COUNT ***************
 		training_text = "This is the training text." #The real training text is much longer
