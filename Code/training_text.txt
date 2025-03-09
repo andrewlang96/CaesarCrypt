@@ -1,1 +1,4 @@
-This file contains the text that the make_model.py will read.
+This is a stand in for the real training text. the purpose of the traning text is to provide an example of average english written text and its structure. The structure that
+we are most interested in is the rate of occurence of different adjacent letter pairs. The model builder will read through this text and count the total number of adjacent letter pairs
+as well as the number of occurences of each unique pair. Because the model is looking to find the average rate of occurance of adjacent letter pairs, the training text tends to become
+more acurate as it gets longer. For this reason I'm adding more text than is necessary for the explanation.
