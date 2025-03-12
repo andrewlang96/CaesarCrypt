@@ -21,7 +21,7 @@ class Model:
                 else:
                     self.adj_pairs[char + self.training_text[i + 1]] += 1 #The currnet pair has been added
                     self.pair_count += 1
-            except IndexError: #IndexError on second to last charater
+            except IndexError: #IndexError on last char
                 break
         self.adj_pairs = {k:(self.adj_pairs[k]/self.pair_count) for k in self.adj_pairs} #Convert from pair count to pari frequency
         self.adj_pairs = dict(sorted(self.adj_pairs.items(), key=lambda i: i[1], reverse=True)) #Order pairs by frequency
@@ -33,7 +33,7 @@ class Model:
 def main():
     m1 = Model()
     m1.make_model("model.csv")
-    print(m1.pair_df, f"\nPair count: {m1.pair_count}\nUnique Pairs: {len(m1.adj_pairs)}")
+    print(m1.pair_df, f"\nTotal Pairs: {m1.pair_count}\nUnique Pairs: {len(m1.adj_pairs)}")
 
 
 

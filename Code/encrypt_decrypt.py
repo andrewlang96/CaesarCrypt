@@ -20,7 +20,7 @@ class Crypt:
         return self.encrypted_message
 
 def main():
-    c1 = Crypt("kyzj zj re vtipgkvu jkizex fw kvok", 17, decrypt=True)
+    c1 = Crypt("This will actually be encrypted now", 12, decrypt=True)
     print(c1.en_decrypt())
 
 
